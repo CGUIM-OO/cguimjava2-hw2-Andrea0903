@@ -77,13 +77,26 @@ class Deck{
 		//Card card=new Card(1,1); ->means new card as clubs ace
 		//cards.add(card);
 		//Sample code end
+		 for (int j=1;j<=nDeck;j++)
+		 {
+			 for (int k=1;k<=4;k++)
+			 {
+				 for (int l=1;l<=13;l++)
+				 {
+					 Card card=new Card(k,l);		
+							 cards.add(card);
+				 }
+			 }
+		 }
 
 	}	
 	//TODO: Please implement the method to print all cards on screen (10 points)
 	public void printDeck(){
 		//Hint: print all items in ArrayList<Card> cards, 
 		//TODO: please implement and reuse printCard method in Card class (5 points)
-
+                     for (int n=0;n<cards.size();n++){
+			cards.get(n).printCard();
+		}
 	}
 	public ArrayList<Card> getAllCards(){
 		return cards;
@@ -94,7 +107,9 @@ class Deck{
  */
 class Card{
 	private int suit; //Definition: 1~4, Clubs=1, Diamonds=2, Hearts=3, Spades=4
+	String suit1[]={"Clubs","Diamonds","Hearts","Spades"};
 	private int rank; //1~13
+	String rank1[]={"A","2","3","4","5","6","7","8","9","10","J","Q","K"};
 	/**
 	 * @param s suit
 	 * @param r rank
@@ -106,7 +121,24 @@ class Card{
 	//TODO: 1. Please implement the printCard method (20 points, 10 for suit, 10 for rank)
 	public void printCard(){
 		//Hint: print (System.out.println) card as suit,rank, for example: print 1,1 as Clubs Ace
+                if ( suit == 1 ) System.out.print("Clubs ");
+		if ( suit == 2 ) System.out.print("Diamonds ");
+		if ( suit == 3 ) System.out.print("Hearts ");
+		if ( suit == 4 ) System.out.print("Spades ");
 
+		if ( rank == 1 ) System.out.println("Ace");
+		if ( rank == 2 ) System.out.println("2");
+		if ( rank == 3 ) System.out.println("3");
+		if ( rank == 4 ) System.out.println("4");
+		if ( rank == 5 ) System.out.println("5");
+		if ( rank == 6 ) System.out.println("6");
+		if ( rank == 7 ) System.out.println("7");
+		if ( rank == 8 ) System.out.println("8");
+		if ( rank == 9 ) System.out.println("9");
+		if ( rank == 10 ) System.out.println("10");
+		if ( rank == 11 ) System.out.println("J");
+		if ( rank == 12 ) System.out.println("Q");
+		if ( rank == 13 ) System.out.println("K");
 	}
 	public int getSuit(){
 		return suit;
