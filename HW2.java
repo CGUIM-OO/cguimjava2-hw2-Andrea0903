@@ -3,9 +3,10 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 /**
- * @author TODO: please add student ID and name here
+ * @author TODO: B0544121 楊曉喬
  * Try to write some comments for your codes (methods, 15 points)
- */
+ */  Create an arraylist to put the new card into it. Create array suit and array rank into class card.
+Use the method to print all cards into screen and change 1 11 12 13 to ACE J Q K.
 public class HW2 {
 
 	public static void main(String[] args) {
@@ -64,7 +65,7 @@ public class HW2 {
 
 }
 /**
- * Description: TODO: please add description here
+ * Description: TODO: Create 3 for loops and new the Card to add the card into deck.
  */
 class Deck{
 	private ArrayList<Card> cards;
@@ -94,16 +95,17 @@ class Deck{
 	public void printDeck(){
 		//Hint: print all items in ArrayList<Card> cards, 
 		//TODO: please implement and reuse printCard method in Card class (5 points)
-                     for (int n=0;n<cards.size();n++){
+                     for (int n=0;n<cards.size();n++)
+		     {
 			cards.get(n).printCard();
-		}
+		     }                                  
 	}
 	public ArrayList<Card> getAllCards(){
 		return cards;
 	}
 }
 /**
- * Description: TODO: please add description here
+ * Description: TODO: Create array suit1 and array rank1. And put the definition in it.
  */
 class Card{
 	private int suit; //Definition: 1~4, Clubs=1, Diamonds=2, Hearts=3, Spades=4
